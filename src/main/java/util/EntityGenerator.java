@@ -12,8 +12,8 @@ public class EntityGenerator {
     public static List<Employee> generateEntities(int quantity){
         List<Employee> list = new ArrayList<>(quantity);
         Faker faker = new Faker();
-        EmployeeDetails employeeDetails = new EmployeeDetails();
         for (int i = 0; i < quantity; i++) {
+            EmployeeDetails employeeDetails = new EmployeeDetails();
             Employee employee = new Employee();
             employee.setName(faker.name().firstName());
             employee.setLastName(faker.name().lastName());
